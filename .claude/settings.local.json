@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php -l:*)",
+      "Bash(powershell -Command \"php -l ''c:\\\\Users\\\\pc\\\\Desktop\\\\onenav-ai-generator\\\\onenav-ai-generator.php''\")",
+      "Bash(git --version:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}

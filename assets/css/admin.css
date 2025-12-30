@@ -1,0 +1,438 @@
+/* OneNav AI Generator 插件样式 */
+
+/* AI生成面板样式 */
+#onenav-ai-generator-panel {
+    margin-bottom: 20px;
+    border: 1px solid #c3c4c7;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    background: #fff;
+}
+
+#onenav-ai-generator-panel .postbox-header {
+    border-bottom: 1px solid #c3c4c7;
+    background: #f6f7f7;
+}
+
+#onenav-ai-generator-panel .postbox-header h2 {
+    font-size: 14px;
+    padding: 8px 12px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+#onenav-ai-generator-panel .inside {
+    padding: 12px;
+}
+
+#onenav-ai-generator-panel .inside p {
+    margin: 0 0 10px 0;
+    color: #646970;
+    font-size: 13px;
+}
+
+/* AI生成按钮样式 */
+#generate-ai-content {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    font-size: 13px;
+    line-height: 1.4;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+
+#generate-ai-content:hover:not(:disabled) {
+    background: #0073aa;
+    border-color: #0073aa;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 115, 170, 0.3);
+}
+
+#generate-ai-content:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#generate-ai-content .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+/* 状态消息样式 */
+#ai-generation-status .notice {
+    margin: 0;
+    padding: 8px 12px;
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-radius: 0 3px 3px 0;
+    font-size: 13px;
+}
+
+#ai-generation-status .notice-success {
+    background-color: #d4edda;
+    border-left-color: #28a745;
+    color: #155724;
+}
+
+#ai-generation-status .notice-error {
+    background-color: #f8d7da;
+    border-left-color: #dc3545;
+    color: #721c24;
+}
+
+#ai-generation-status .notice-info {
+    background-color: #d1ecf1;
+    border-left-color: #17a2b8;
+    color: #0c5460;
+}
+
+/* 批量生成页面样式 */
+#batch-generate-container {
+    max-width: 800px;
+}
+
+#batch-generate-container p {
+    font-size: 14px;
+    color: #646970;
+    margin-bottom: 20px;
+}
+
+#start-batch-generate {
+    padding: 10px 20px;
+    font-size: 14px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* 进度条样式 */
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #0073aa, #005177);
+    width: 0%;
+    transition: width 0.3s ease;
+    border-radius: 10px;
+    position: relative;
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(
+        -45deg,
+        rgba(255, 255, 255, 0.2) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.2) 50%,
+        rgba(255, 255, 255, 0.2) 75%,
+        transparent 75%,
+        transparent
+    );
+    background-size: 20px 20px;
+    animation: move 1s linear infinite;
+}
+
+@keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 20px 20px;
+    }
+}
+
+#progress-text {
+    font-size: 14px;
+    color: #646970;
+    margin: 0;
+    text-align: center;
+}
+
+/* 结果表格样式 */
+#batch-results {
+    margin-top: 20px;
+}
+
+#batch-results h3 {
+    margin-bottom: 15px;
+    color: #23282d;
+}
+
+#batch-results table {
+    margin-top: 10px;
+}
+
+#batch-results .status-success {
+    color: #28a745;
+    font-weight: 600;
+}
+
+#batch-results .status-error {
+    color: #dc3545;
+    font-weight: 600;
+}
+
+/* 设置页面样式增强 */
+.form-table th {
+    width: 200px;
+    padding: 15px 10px 15px 0;
+}
+
+.form-table td {
+    padding: 15px 10px;
+}
+
+.form-table input[type="text"],
+.form-table input[type="url"],
+.form-table input[type="password"],
+.form-table input[type="number"],
+.form-table textarea {
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-table textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-table .description {
+    margin-top: 5px;
+    font-style: italic;
+    color: #646970;
+}
+
+/* API密钥切换按钮 */
+#toggle-api-key {
+    margin-left: 10px;
+    padding: 3px 8px;
+    font-size: 12px;
+    height: auto;
+    line-height: 1.4;
+}
+
+#test-api-connection {
+    background: #00a32a;
+    border-color: #00a32a;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 12px;
+    height: auto;
+    line-height: 1.4;
+}
+
+#test-api-connection:hover {
+    background: #008a20;
+    border-color: #008a20;
+}
+
+/* 结构预览样式 */
+#structure-preview {
+    margin-top: 10px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-left: 4px solid #0073aa;
+    border-radius: 0 4px 4px 0;
+}
+
+#structure-preview strong {
+    display: block;
+    margin-bottom: 10px;
+    color: #23282d;
+    font-size: 14px;
+}
+
+#structure-content ol {
+    margin: 0;
+    padding-left: 20px;
+}
+
+#structure-content li {
+    margin-bottom: 5px;
+    color: #646970;
+    font-size: 13px;
+}
+
+/* 字数统计样式 */
+#prompt-counter {
+    margin-top: 5px;
+    color: #646970;
+    font-size: 12px;
+    text-align: right;
+}
+
+/* 古腾堡编辑器面板样式 */
+.onenav-ai-generator-panel {
+    padding: 16px;
+}
+
+.onenav-ai-generator-panel .components-button {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 782px) {
+    .form-table th,
+    .form-table td {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+    
+    .form-table th {
+        border-bottom: 0;
+    }
+    
+    .form-table input[type="text"],
+    .form-table input[type="url"],
+    .form-table input[type="password"],
+    .form-table input[type="number"],
+    .form-table textarea {
+        max-width: 100%;
+    }
+    
+    #toggle-api-key,
+    #test-api-connection {
+        margin-left: 0;
+        margin-top: 10px;
+        display: block;
+        width: auto;
+    }
+    
+    #batch-generate-container {
+        padding: 0 10px;
+    }
+}
+
+/* 加载动画 */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+/* 工具提示样式 */
+.onenav-tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+}
+
+.onenav-tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #23282d;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.onenav-tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #23282d transparent transparent transparent;
+}
+
+.onenav-tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 成功/错误状态指示器 */
+.status-indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.status-indicator.success {
+    background-color: #28a745;
+}
+
+.status-indicator.error {
+    background-color: #dc3545;
+}
+
+.status-indicator.warning {
+    background-color: #ffc107;
+}
+
+/* 卡片样式 */
+.onenav-card {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.onenav-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #23282d;
+    font-size: 16px;
+}
+
+.onenav-card p {
+    color: #646970;
+    line-height: 1.6;
+}
+
+/* 按钮组样式 */
+.onenav-button-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.onenav-button-group .button {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .onenav-button-group {
+        flex-direction: column;
+    }
+    
+    .onenav-button-group .button {
+        width: 100%;
+    }
+}
