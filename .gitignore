@@ -2,9 +2,10 @@
 .DS_Store
 thumbs.db
 
-# IDE
+# IDE & Editors
 .idea/
 .vscode/
+.claude/
 *.sublime-project
 *.sublime-workspace
 
@@ -13,6 +14,10 @@ thumbs.db
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Plugin runtime files
+batch-status.json
+batch-generate.log
 
 # Dependencies
 node_modules/
